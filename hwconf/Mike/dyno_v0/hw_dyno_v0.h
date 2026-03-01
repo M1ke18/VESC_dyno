@@ -17,17 +17,15 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
     */
 
-#ifndef HW_EXAMPLE_CORE_H_
-#define HW_EXAMPLE_CORE_H_
+#ifndef HW_DYNO_V0_H_
+#define HW_DYNO_V0_H_
 
-#ifdef HW_EXAMPLE_IS_MK1
+
 #define HW_NAME					"Dyno"
-#else
-#error "Must include hardware type"
-#endif
 
-#define HW_MAJOR				1
-#define HW_MINOR				0
+
+// #define HW_MAJOR				1
+// #define HW_MINOR				0
 
 // HW properties
 //#define HW_HAS_DRV8301
@@ -149,7 +147,7 @@
 #define HW_UART_P_DEV_TX		SD5 // UART for TX, due to mistake below
 #define HW_UART_P_GPIO_AF		GPIO_AF_UART4
 #define HW_UART_P_TX_PORT		GPIOC
-#define HW_UART_P_TX_PIN		12 // This is a mistake in the HW. We have to use a hack to use UART5.
+#define HW_UART_P_TX_PIN		12 // This is a mistake in the HW. We have to use a hack to use UART5. TODO
 #define HW_UART_P_RX_PORT		GPIOC
 #define HW_UART_P_RX_PIN		11
 

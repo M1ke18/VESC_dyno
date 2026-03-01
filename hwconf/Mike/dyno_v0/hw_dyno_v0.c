@@ -23,10 +23,10 @@
 #include "hal.h"
 #include "stm32f4xx_conf.h"
 #include "utils_math.h"
-#include "drv8301.h"
 #include "terminal.h"
 #include "commands.h"
 #include "mc_interface.h"
+#include "hw_dyno_v0.h"
 
 // Variables
 static volatile bool i2c_running = false;
@@ -60,7 +60,7 @@ void hw_init_gpio(void) {
 			PAL_STM32_OSPEED_HIGHEST);
 
 	ENABLE_GATE();
-	
+
 	// Current filter
 	palSetPadMode(GPIOD, 2,
 			PAL_MODE_OUTPUT_PUSHPULL |
@@ -115,8 +115,6 @@ void hw_init_gpio(void) {
 	palSetPadMode(GPIOC, 2, PAL_MODE_INPUT_ANALOG);
 	palSetPadMode(GPIOC, 3, PAL_MODE_INPUT_ANALOG);
 	palSetPadMode(GPIOC, 4, PAL_MODE_INPUT_ANALOG);
-
-	drv8301_init();
 }
 
 void hw_setup_adc_channels(void) {

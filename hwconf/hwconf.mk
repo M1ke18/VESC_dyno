@@ -1,4 +1,4 @@
-HWSRC =	\
+HWSRC = \
 	hwconf/board.c \
 	hwconf/hw.c \
 	hwconf/drv8301.c \
@@ -11,6 +11,10 @@ HWSRC =	\
 	hwconf/si8900.c \
 	hwconf/shutdown.c \
 
-HWINC = hwconf \
-		hwconf/luna \
-		hwconf/other
+
+HWINC = \
+	hwconf \
+	hwconf/luna \
+	hwconf/other \
+
+ 
